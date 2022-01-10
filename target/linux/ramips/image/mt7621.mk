@@ -462,6 +462,15 @@ define Device/zbt-wg3526-32M
 endef
 TARGET_DEVICES += zbt-wg3526-32M
 
+define Device/zte_e8820v2
+  DTS := E8820V2
+  IMAGE_SIZE :=$(ralink_default_fw_size_16M)
+  DEVICE_TITLE := ZTE E8820V2
+  DEVICE_PACKAGES := \
+	kmod-mt76 kmod-mt7603 kmod-mt76x2 kmod-usb3kmod-usb-ledtrig-usbport wpad hostapd-utils
+endef
+TARGET_DEVICES += zte_e8820v2
+
 # FIXME: is this still needed?
 define Image/Prepare
 #define Build/Compile
